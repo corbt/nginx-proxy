@@ -29,7 +29,7 @@ RUN wget https://github.com/jwilder/docker-gen/releases/download/$DOCKER_GEN_VER
 
 COPY . /app/
 WORKDIR /app/
-
+VOLUME ["/sites-enabled"]
 
 EXPOSE 80
 ENV DOCKER_HOST unix:///tmp/docker.sock
